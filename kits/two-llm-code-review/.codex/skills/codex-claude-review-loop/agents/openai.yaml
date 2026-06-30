@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Claude Review Loop"
+  short_description: "Autonomous security and architecture audits"
+  default_prompt: "Use $codex-claude-review-loop to audit Claude Code changes, cluster files, write an audit log, and draft a handoff plan."
