@@ -13,13 +13,12 @@ two-llm-code-review/
   README.md
   AGENTS.md
   chat-handoff-template.md
-  .codex/
-    skills/
-      codex-claude-review-loop/
-        SKILL.md
-        agents/openai.yaml
-        references/output-templates.md
-        scripts/review_inventory.py
+  codex-skills/
+    codex-claude-review-loop/
+      SKILL.md
+      agents/openai.yaml
+      references/output-templates.md
+      scripts/review_inventory.py
   plans/
     01-installation.md
     02-review-workflow.md
@@ -27,8 +26,10 @@ two-llm-code-review/
 
 ## Schnellstart
 
-1. Kopiere `AGENTS.md` in dein Repository oder übertrage die Rollenregel in deine bestehende Agent-Datei.
-2. Kopiere `.codex/skills/codex-claude-review-loop/` in dein Codex-Skill-Verzeichnis oder in dein Repository.
+1. Kopiere `AGENTS.md` in dein Repository oder übertrage die Rollenregel in deine bestehende Agent-Datei. Diese Projekt-Härtung bleibt lokal im jeweiligen Repo.
+2. Installiere den Skill global, nicht doppelt im Repo:
+   - Windows: kopiere `codex-skills/codex-claude-review-loop/` nach `C:\Users\<dein-name>\.codex\skills\codex-claude-review-loop\`
+   - macOS/Linux: kopiere `codex-skills/codex-claude-review-loop/` nach `~/.codex/skills/codex-claude-review-loop/`
 3. Lass ein LLM implementieren.
 4. Lass Codex mit `$codex-claude-review-loop` reviewen.
 5. Gib dem Implementierer anschließend `chat-handoff-template.md`, den Audit und die Plan-Datei.
@@ -45,3 +46,7 @@ two-llm-code-review/
 ## Sicherheitsregel
 
 Dieses Paket ist ein Muster. Entferne vor öffentlicher Nutzung alle privaten Pfade, Projektnamen, Screenshots, Secrets und Kundendaten.
+
+## Warum global installieren?
+
+Der Skill ist wiederverwendbar und sollte nur einmal in deinem persönlichen Codex-Skill-Ordner liegen. Die Rollenregel in `AGENTS.md` bleibt dagegen pro Repository lokal, weil jedes Projekt eigene Regeln, Schutzbereiche und Dokumentationspfade hat.

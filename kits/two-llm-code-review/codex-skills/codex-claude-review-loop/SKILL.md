@@ -51,8 +51,10 @@ Ask only if the scope or authority is genuinely unclear. Do not ask before every
 Run the helper when possible:
 
 ```powershell
-python .codex/skills/codex-claude-review-loop/scripts/review_inventory.py --repo . --scope changed
+python "$env:USERPROFILE\.codex\skills\codex-claude-review-loop\scripts\review_inventory.py" --repo . --scope changed
 ```
+
+On macOS/Linux, use `python ~/.codex/skills/codex-claude-review-loop/scripts/review_inventory.py --repo . --scope changed`.
 
 Use `--scope all` for whole-repo reviews or `--target <path>` for explicit scopes. The script only inventories files; it does not judge code quality.
 

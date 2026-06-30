@@ -18,7 +18,7 @@ Diese Datei ist ein minimales Muster für ein Repository, in dem ein LLM impleme
 
 ## Review-Workflow
 
-- Nutze den Skill `.codex/skills/codex-claude-review-loop/SKILL.md`.
+- Nutze den global installierten Skill `~/.codex/skills/codex-claude-review-loop/SKILL.md` bzw. unter Windows `C:\Users\<dein-name>\.codex\skills\codex-claude-review-loop\SKILL.md`.
 - Schreibe Audit-Logs und Plan-Dateien als normale Markdown-Dateien.
 - Übergib Audit und Plan im Chat an das Implementierer-LLM.
 - Halte fest, welche Dateien bereits mit welchem Commit oder Hash geprüft wurden.
